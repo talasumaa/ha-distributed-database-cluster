@@ -2,6 +2,9 @@
 
 A fault-tolerant, active-active database cluster designed for zero-downtime Machine Learning pipelines.
 
+![Python](https://img.shields.io/badge/Python-57.8-red?logo=python)
+![Shell](https://img.shields.io/badge/Shell-24.4-black)
+
 This project engineers the reliability layer required for production-grade Feature Stores and Model Serving endpoints. It moves beyond "works on my machine" to "survives hardware failure," using industry-standard Linux automation to guarantee data persistence during catastrophic node loss.
 
 ## 🏗 Architecture
