@@ -1,0 +1,51 @@
+Cluster Name: my_cluster
+Corosync Nodes:
+ db1 db2 db3
+Pacemaker Nodes:
+ db1 db2 db3
+
+Resources:
+  Resource: ClusterIP (class=ocf provider=heartbeat type=IPaddr2)
+    Attributes: ClusterIP-instance_attributes
+      cidr_netmask=24
+      ip=192.168.205.70
+    Operations:
+      monitor: ClusterIP-monitor-interval-30s
+        interval=30s
+      start: ClusterIP-start-interval-0s
+        interval=0s
+        timeout=20s
+      stop: ClusterIP-stop-interval-0s
+        interval=0s
+        timeout=20s
+
+Stonith Devices:
+Fencing Levels:
+
+Location Constraints:
+Ordering Constraints:
+Colocation Constraints:
+Ticket Constraints:
+
+Alerts:
+ No alerts defined
+
+Resources Defaults:
+  Meta Attrs: rsc_defaults-meta_attributes
+    resource-stickiness=100
+Operations Defaults:
+  No defaults set
+
+Cluster Properties:
+ cluster-infrastructure: corosync
+ cluster-name: my_cluster
+ dc-version: 2.1.5-a3f44794f94
+ have-watchdog: false
+ no-quorum-policy: stop
+ stonith-enabled: false
+
+Tags:
+ No tags defined
+
+Quorum:
+  Options:

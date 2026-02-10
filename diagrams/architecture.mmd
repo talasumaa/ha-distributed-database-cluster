@@ -1,0 +1,21 @@
+graph TD
+    User((Client / Python Script))
+    VIP(Floating IP .70)
+    
+    subgraph "High Availability Cluster"
+        db1[DB1 - Active]
+        db2[DB2 - Active]
+        db3[DB3 - Active]
+    end
+
+    User -->|SQL Query| VIP
+    VIP -.->|Routes to| db1
+    VIP -.->|Failover Route| db2
+    
+    %% Galera Sync Replication
+    db1 <==>|Galera Sync| db2
+    db2 <==>|Galera Sync| db3
+    db3 <==>|Galera Sync| db1
+
+    style VIP fill:#f9f,stroke:#333,stroke-width:2px
+    style db1 fill:#bbf,stroke:#333,stroke-width:2px
