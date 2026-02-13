@@ -154,3 +154,7 @@ Log excerpt showing connection recovery:
 [14:02:10.450] [SUCCESS] Connected to db1
 [14:02:12.100] [SUCCESS] Connected to db2  <-- Recovery
 ```
+
+## 📄 License
+
+This project is licensed under Personal License - see the **[LICENSE](LICENSE)** file for details.
