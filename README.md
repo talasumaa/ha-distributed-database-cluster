@@ -1,6 +1,6 @@
 # High-Availability Distributed Data Infrastructure
 
-A fault-tolerant, active-active database cluster designed for zero-downtime Machine Learning pipelines.
+*A fault-tolerant, active-active database cluster designed for zero-downtime Machine Learning pipelines.*
 
 ![Python](https://img.shields.io/badge/Python-57.8-red?logo=python)
 ![Shell](https://img.shields.io/badge/Shell-24.4-black)
@@ -158,4 +158,4 @@ Log excerpt showing connection recovery:
 
 ## 📄 License
 
-This project is licensed under Personal License - see the **[LICENSE](LICENSE)** file for details.
+> This project is licensed under Personal License - see the **[LICENSE](LICENSE)** file for details.
